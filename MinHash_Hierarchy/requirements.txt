@@ -1,0 +1,6 @@
+codetiming==1.3.0
+matplotlib
+numpy
+pandas
+scipy
+tqdm
