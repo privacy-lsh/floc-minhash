@@ -32,15 +32,14 @@ To run the experiment with default parameters for length 20:
 $ python ml-25m_main.py
 ```
 
-In our code, we
 The experiment has two stages. In the first stage, use the positive data provided by the oracle and Maximum Likelihood Estimation to perform supervise learning. In the second stage, use adversarial training to improve the generator.
 
-When you running the code, the pre-train model will be store in folder ``ckpts_ml25m``, if you want to restore the pre-trained discriminator model, you can run:
+When running the code, the pre-train model will be stored in folder ``ckpts_ml25m``, if you want to restore the pre-trained discriminator model, you can run:
 ```
 $ python ml-25m_main.py --resD=True --model=leakgan_preD
 ``` 
 
-if you want to restore all pre-traine model or unsupervised model (store model every 30 epoch named ``leakgan-31`` or other number), you can run:
+if you want to restore all pre-trained model or unsupervised model (store model every 30 epoch named ``leakgan-31`` or other number), you can run:
 ```
 $ python ml-25m_main.py --restore=True --model=leakgan_pre
 ``` 

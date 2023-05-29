@@ -1,12 +1,22 @@
 # Attacks on FLoC
 
-This repository contains the code for the attack components and evaluation
-adapted from the one for the technical report **"Analysing and exploiting Google's FLoC advertising proposal"**.
+This folder contains the code for the attacks on FLoC and their evaluation. 
+It is adapted from the technical report **"Analysing and exploiting Google's FLoC advertising proposal"**.
 
-## Prerequisites
+## Table of Contents
 
-This project makes use of [LeakGAN](https://github.com/CR-Gjx/LeakGAN) by [@CR-Gjx](https://github.com/CR-Gjx) and for compatibility requires the use of an older tensorflow version. 
-It was updated to Python 3.6 and TensorFlow 1.8.0.
+- [Requirements](#requirements)
+- [Data](#data)
+- [Directory Structure](#directory-structure)
+- [Usage](#usage)
+
+
+## Requirements
+
+This project makes use of [LeakGAN](https://github.com/CR-Gjx/LeakGAN) by [@CR-Gjx](https://github.com/CR-Gjx).
+Note that they do not provide a license for their code.
+
+It requires the use of Python 2.7 and Tensorflow r1.2.1 but we updated the requirements to Python 3.6 and TensorFlow 1.8.0.
 
 For convenience we provide a conda environment file (used on Windows 10). Some listed dependencies may not be needed anymore.
 ```shell
@@ -68,8 +78,13 @@ FLoC
 └── utils.py
 ```
 
+## Usage
 
+First the LeakGAN needs to be trained, this can be done by running the `ml-25m_main.py` file in the `GAN` folder.
+It was trained on a Windows computer using an Nvidia GeForce RTX 2070 Super.
 
+Then once some checkpoints from the GAN training have been saved, it is possible to run `pipeline.py` in the `evaluation` folder.
+It runs the GAN-IP attack on FLoC.
 
-
+Each folder containing code has its own `README.md` which provide additional information on its content. 
 
